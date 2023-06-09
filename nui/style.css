@@ -1,0 +1,245 @@
+@font-face {
+    font-family: fuente;
+    src: url(fonts/fuente.ttf);
+}
+
+
+* {
+    font-family: fuente;
+    font-weight: 400;
+}*
+
+.form-control {
+    font-weight: 600;
+}
+
+body {
+    background: transparent !important;
+    margin-top: 80px;
+}
+
+.container-box {
+    border: solid 2px #dc143cac; 
+    border-radius: 15px; 
+    margin-top: 10vh;
+    background-color: #242328;
+}
+
+/*TITLE CSS*/
+.title-box {
+    color: white;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.title-box h3 {
+    font-weight: 900;
+}
+
+.right-btns {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.card-box {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.plus {
+    position: absolute;
+    bottom: 0;
+    right: -8px;
+    color: white !important;
+    background-color: rgba(220, 20, 60, 1);
+    padding: 3px;
+    border-radius: 50%;
+    font-size: 12px;
+    text-align: center;
+    padding: 3px;
+}
+
+.left-btns img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: .25rem;
+}
+
+
+
+/*MAIN PAGE*/
+.cash-type {
+    background-color: #2d2c31;
+    border-radius: 10px;
+    color: white;
+    border: solid 1px #dc143cac; 
+}
+
+.cash-type h3 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.cash-type div i {
+    font-size: 30px;
+    
+}
+
+.cash-type div h3 {
+    font-weight: 550;
+}
+
+.cash-type-text {
+    font-size: 20px !important;
+
+}
+
+.action-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.action-type input {
+    border-radius: 10px;
+    text-align: center;
+}
+
+.action-type-text {
+    color: #ff0033cc;
+    text-align: center;
+}
+
+.footer-box {
+    color: white;
+}
+
+
+/* CARD CSS */
+
+.card-title {
+    color: white;
+}
+
+
+.card-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.card {
+    width: 400px;
+    height: 225px;
+    color: #fff;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #0045c7, #ff2c7d);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.map-img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.card-no {
+    font-size: 35px;
+    margin-top: 20px;
+}
+
+.card-holder {
+    font-size: 12px;
+    margin-top: 40px;
+}
+
+.name {
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.bar {
+    background: #222;
+    margin-left: -30px;
+    margin-right: -30px;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.card-cvv {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-cvv div {
+    flex: 1;
+}
+
+.card-cvv img {
+    width: 100%;
+    display: block;
+    line-height: 0;
+}
+
+.card-cvv p {
+    background: #fff;
+    color: #000;
+    font-size: 22px;
+    padding: 10px 20px;
+}
+
+.card-text {
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+.signature {
+    margin-top: 30px;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.card:hover .card-inner {
+    transform: rotateY(-180deg);
+}

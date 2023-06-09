@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="scripting/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>RedFalcon Banking</title>
+</head>
+<body>
+
+    <div class="container container-box">
+        <div class="row">
+            <div class="col-12 no-padding">
+                <div class="container-fluid">
+                    <div class="row title-box p-3" style="background-color: #2d2c31; border-top-left-radius: 15px; border-top-right-radius: 15px;">
+                        <div class="d-flex left-btns">
+                            <h3 style="font-size: 35px;">Maze Bank</h3>
+                            <img src="images/logo.png">
+                        </div>
+                        <div class="right-btns" id="card-btn">
+                            <div class="card-box" data-toggle="tooltip" data-placement="left" title="Gestionar tarjeta">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <i class="fa-solid fa-plus plus"></i>
+                            </div>
+
+                            <i class="fa-solid fa-right-from-bracket mx-3" data-toggle="tooltip" data-placement="bottom" title="Salir"></i>
+                        </div>
+                    </div>
+
+                    <div id="main-section">
+                        <div class="row d-flex justify-content-between p-5 position-relative">
+                            <div class="col-3 cash-type p-4">
+                                <h3 class="cash-type-text">Dinero en efectivo</h3>
+                                <div class="d-flex justify-content-between">
+                                    <h3>787090$</h3>
+                                    <i class="fa-solid fa-wallet"></i>
+                                </div>
+                            </div>
+                            <div class="col-3 cash-type p-4">
+                                <h3 class="cash-type-text">Dinero en el banco</h3>
+                                <div class="d-flex justify-content-between">
+                                    <h3>95740$</h3>
+                                    <i class="fa-solid fa-piggy-bank"></i>
+                                </div>
+                            </div>
+                            <div class="col-3 cash-type p-4">
+                                <h3 class="cash-type-text">Salario</h3>
+                                <div class="d-flex justify-content-between">
+                                    <h3>1060$</h3>
+                                    <i class="fa-solid fa-building-columns"></i>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="row d-flex justify-content-between pt-2 px-5">
+                            <div class="col-3 action-type p-3">
+                                <h3 class="action-type-text">Sacar dinero</h3>
+                                <input type="text" placeholder="Introduce la cantidad" class="form-control">
+                                <button class="btn btn-success mt-2">Retirar</button>
+                            </div>
+                            <div class="col-3 action-type p-3">
+                                <h3 class="action-type-text">Depositar dinero</h3>
+                                <input type="text" placeholder="Introduce la cantidad" class="form-control">
+                                <button class="btn btn-success mt-2">Depositar</button>
+                            </div>
+                            <div class="col-3 action-type p-3">
+                                <h3 class="action-type-text">Transferencia</h3>
+                                <div class="row">
+                                    <div class="col-9">
+                                        <input type="text" placeholder="Introduce la cantidad" class="form-control">
+                                    </div>
+                                    <div class="col-3">
+                                        <input type="text" placeholder="ID" class="form-control">
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn-success mt-2">Transferir</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row d-none justify-content-between p-5" id="card-section">
+                        <h3 class="card-title">Gestión de la tarjeta</h3>
+                        <div class="col-3 p-4"></div>
+                        <div class="card-container">
+                            <div class="card">
+                                <div class="card-inner">
+                                    <div class="front">
+                                        <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                                        <div class="row">
+                                            <img src="https://i.ibb.co/G9pDnYJ/chip.png" width="60px">
+                                            <img src="https://i.ibb.co/WHZ3nRJ/visa.png" width="60px">
+                                        </div>
+                                        <div class="row card-no">
+                                            <p>5244</p>
+                                            <p>2150</p>
+                                            <p>8252</p>
+                                            <p>6420</p>
+                                        </div>
+                                        <div class="row name">
+                                            <p>JOE ALISON</p>
+                                            <p>10 / 25</p>
+                                        </div>
+                                    </div>
+                                    <div class="back">
+                                        <img src="https://i.ibb.co/PYss3yv/map.png" class="map-img">
+                                        <div class="bar"></div>
+                                        <div class="row card-cvv">
+                                            <div>
+                                                <img src="https://i.ibb.co/S6JG8px/pattern.png">
+                                            </div>
+                                        </div>
+                                        <div class="row card-text">
+                                            <p>Tarjeta oficial de Maze Bank</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-3 action-type p-3">
+                                <h3 class="action-type-text">Pin personal</h3>
+                                <input type="text" placeholder="Introduce el pin" class="form-control">
+                                <button class="btn btn-success mt-2">Asignar pin</button>
+                            </div>
+                        </div>
+                    </div> 
+
+    
+
+                    <div class="row mt-3" style="background-color: #2d2c31;">
+                        <div class="col-12 p-3 footer-box">
+                            <h3 style="font-size: 20px;">El éxito es el fruto de los pequeños esfuerzos... - Maze Bank</h3>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="scripting/external/jquery/jquery.js"></script>
+    <script src="scripting/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/b-1.5.6/fc-3.2.5/kt-2.5.0/r-2.2.2/datatables.min.js"></script>
+    <script src="qb-banking.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+        var count = 0;
+        var main = document.getElementById("main-section");
+        var card = document.getElementById("card-section");
+
+        document.getElementById("card-btn").addEventListener("click", function() {
+            if (count == 0) {
+                main.style.display = 'none';
+                card.classList.remove('d-none');
+                card.style.display = 'flex';
+                count += 1;
+            } else {
+                main.style.display = 'block';
+                card.style.display = 'none';
+                count = 0;
+            }
+        });
+
+    </script>
+</body>
+
+</html>
