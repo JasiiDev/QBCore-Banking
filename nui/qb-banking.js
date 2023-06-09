@@ -7,7 +7,7 @@ var currentBankCard = null;
 
 window.addEventListener("message", function (event) {
     if(event.data.status == "openbank") {
-        /*$("#cardDetails").css({"display":"none"});*/
+        $("#cardDetails").css({"display":"none"});
         $("#createNewPin").css({"display":"none"});
         $("#successMessageATM").removeClass('alert-danger').addClass('alert-success');
         $("#successRowATM").css({"display":"none"});
